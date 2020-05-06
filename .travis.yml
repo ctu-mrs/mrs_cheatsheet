@@ -1,0 +1,22 @@
+sudo: required
+os:
+- linux
+dist: bionic
+branches:
+  only:
+    - master
+jobs:
+  include:
+    - stage: build
+      before_install:
+        - sudo apt -y install texlive texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+      script:
+        - mkdir -p output
+        - mv main.pdf otuput/
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        local_dir: output
+        github_token: $GH_REPO_TOKEN
+        on:
+          branch: master
