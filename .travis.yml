@@ -9,6 +9,7 @@ jobs:
   include:
     - stage: build
       before_install:
+        - sudo apt -y update
         - sudo apt -y install texlive texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
       script:
         - mkdir -p output
