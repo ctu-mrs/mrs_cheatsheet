@@ -12,9 +12,8 @@ jobs:
         - sudo apt -y update
         - sudo apt -y install texlive-latex-base texlive-latex-extra
       script:
-        - pdflatex -interaction=nonstopmode main.tex
         - mkdir -p output
-        - mv main.pdf otuput/
+        - pdflatex -interaction=nonstopmode --output-dir output main.tex
       deploy:
         provider: pages
         skip_cleanup: true
