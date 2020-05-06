@@ -17,4 +17,5 @@ Are you new to our lab? Or just a stranger from the internet? Print this cheatsh
   * ROS in terminal,
   * ROS in C++ and Python,
   * Eigen,
-  * and basic Maths used in robotics.
+  * basic Maths used in robotics,
+  * and [Vim CheatSheet](http://vimcheatsheet.com/): please support the guy by buying his posters.
