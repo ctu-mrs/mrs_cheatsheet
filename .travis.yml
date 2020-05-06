@@ -10,8 +10,9 @@ jobs:
     - stage: build
       before_install:
         - sudo apt -y update
-        - sudo apt -y install texlive texlive-latex-base texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
+        - sudo apt -y install texlive-latex-base texlive-fonts-recommended
       script:
+        - pdflatex main.tex
         - mkdir -p output
         - mv main.pdf otuput/
       deploy:
