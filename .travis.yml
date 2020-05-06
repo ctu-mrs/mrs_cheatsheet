@@ -2,9 +2,9 @@ sudo: required
 os:
 - linux
 dist: bionic
-# branches:
-#   only:
-#     - master
+branches:
+  only:
+    - master
 jobs:
   include:
     - stage: build
@@ -14,6 +14,7 @@ jobs:
       script:
         - mkdir -p output
         - pdflatex -interaction=nonstopmode --output-dir output main.tex
+        - mv output/main.pdf output/mrs_cheatsheet.pdf
       deploy:
         provider: pages
         skip_cleanup: true
