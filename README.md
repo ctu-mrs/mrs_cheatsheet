@@ -2,9 +2,12 @@
 
 Are you new to our lab? Or just a stranger from the internet? Print this cheat sheet and you will be happy!
 
-Download [![Cheatsheet PDF](thumbnail.jpg)](https://github.com/ctu-mrs/mrs_cheatsheet/raw/gh-pages/main.pdf)
+| Compilation status | [![Build Status](https://travis-ci.com/ctu-mrs/mrs_cheatsheet.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_cheatsheet) |
 
-The cheatsheet covers basics in daily use of
+Click to download the pdf:
+[![Cheatsheet PDF](thumbnail.jpg)](https://github.com/ctu-mrs/mrs_cheatsheet/raw/gh-pages/main.pdf)
+
+The cheatsheet covers the basics for daily use of
   * Linux terminal (Bash),
   * Tmux,
   * Vim,

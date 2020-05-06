@@ -13,7 +13,7 @@ jobs:
         - sudo apt -y install texlive-latex-base texlive-latex-extra
       script:
         - mkdir -p output
-        - pdflatex -interaction=nonstopmode --output-dir output main.tex || echo dog
+        - pdflatex -interaction=nonstopmode --output-dir output main.tex
       deploy:
         provider: pages
         skip_cleanup: true
