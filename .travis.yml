@@ -10,11 +10,12 @@ jobs:
     - stage: build
       before_install:
         - sudo apt -y update
-        - sudo apt -y install texlive-latex-base texlive-latex-extra
+        - sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils
       script:
         - mkdir -p output
         - pdflatex -interaction=nonstopmode --output-dir output main.tex
-        - mv output/main.pdf output/mrs_cheatsheet.pdf
+        - mv output/main.pdf output/mrs_cheatsheet.pdfj
+        - pdftoppm output/main.pdf output/thumbnail.jpg -jpg -f {1} -singlefile
       deploy:
         provider: pages
         skip_cleanup: true
