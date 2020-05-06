@@ -14,7 +14,7 @@ jobs:
       script:
         - mkdir -p output
         - pdflatex -interaction=nonstopmode --output-dir output main.tex
-        - mv output/main.pdf output/mrs_cheatsheet.pdfj
+        - mv output/main.pdf output/mrs_cheatsheet.pdf
         - pdftoppm output/mrs_cheatsheet.pdf output/thumbnail.jpg -jpg -f {1} -singlefile
       deploy:
         provider: pages
