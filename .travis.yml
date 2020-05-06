@@ -2,9 +2,9 @@ sudo: required
 os:
 - linux
 dist: bionic
-branches:
-  only:
-    - master
+# branches:
+#   only:
+#     - master
 jobs:
   include:
     - stage: build
