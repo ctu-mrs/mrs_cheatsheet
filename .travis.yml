@@ -10,12 +10,14 @@ jobs:
     - stage: build
       before_install:
         - sudo apt -y update
-        - sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils
+        - sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick
       script:
+        - pdflatex -interaction=nonstopmode main.tex
+        - pdftoppm -jpeg main.pdf thumbnail.jpg
+        - montage *.jpg -mode Concatenate -tile 2x2 montage.jpg
         - mkdir -p output
-        - pdflatex -interaction=nonstopmode --output-dir output main.tex
-        - mv output/main.pdf output/mrs_cheatsheet.pdf
-        - pdftoppm output/mrs_cheatsheet.pdf output/thumbnail.jpg -jpg -f {1} -singlefile
+        - mv main.pdf output/mrs_cheatsheet.pdf
+        - mv montage.jpg output/thumbnail.pdf
       deploy:
         provider: pages
         skip_cleanup: true
