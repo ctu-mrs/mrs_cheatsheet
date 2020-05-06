@@ -2,7 +2,7 @@
 
 Are you new to our lab? Or just a stranger from the internet? Print this cheat sheet and you will be happy!
 
-Download ![[Cheatsheet PDF](thumbnail.jpg)](https://github.com/ctu-mrs/mrs_cheatsheet/blob/gh-pages/main.pdf)
+Download [![Cheatsheet PDF](thumbnail.jpg)](https://github.com/ctu-mrs/mrs_cheatsheet/raw/gh-pages/main.pdf)
 
 The cheatsheet covers basics in daily use of
   * Linux terminal (Bash),
