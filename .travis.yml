@@ -1,0 +1,23 @@
+sudo: required
+os:
+- linux
+dist: bionic
+# branches:
+#   only:
+#     - master
+jobs:
+  include:
+    - stage: build
+      before_install:
+        - sudo apt -y update
+        - sudo apt -y install texlive-latex-base texlive-latex-extra
+      script:
+        - mkdir -p output
+        - pdflatex -interaction=nonstopmode --output-dir output main.tex || echo dog
+      deploy:
+        provider: pages
+        skip_cleanup: true
+        local_dir: output
+        github_token: $GH_REPO_TOKEN
+        on:
+          branch: master
