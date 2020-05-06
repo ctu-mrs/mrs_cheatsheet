@@ -17,7 +17,7 @@ jobs:
         - montage *.jpg -mode Concatenate -tile 2x2 montage.jpg
         - mkdir -p output
         - mv main.pdf output/mrs_cheatsheet.pdf
-        - mv montage.jpg output/thumbnail.pdf
+        - mv montage.jpg output/thumbnail.jpg
       deploy:
         provider: pages
         skip_cleanup: true
