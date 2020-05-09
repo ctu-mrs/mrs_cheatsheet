@@ -1,6 +1,4 @@
-# MRS Cheatsheet
-
-[![Build Status](https://travis-ci.com/ctu-mrs/mrs_cheatsheet.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_cheatsheet)
+# MRS Cheatsheet [![Build Status](https://travis-ci.com/ctu-mrs/mrs_cheatsheet.svg?branch=master)](https://travis-ci.com/ctu-mrs/mrs_cheatsheet)
 
 Are you new to our lab? Or just a stranger from the internet? Print this cheatsheet and you will be happy!
 
