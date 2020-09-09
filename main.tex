@@ -18,44 +18,44 @@
 \lstset{
   basicstyle=\ttfamily,
   frame=single
-}
-\usepackage{enumitem}
-\usepackage[english]{babel}
-\usepackage[utf8]{inputenc}
-\usetikzlibrary{decorations.pathmorphing}
+  }
+  \usepackage{enumitem}
+  \usepackage[english]{babel}
+  \usepackage[utf8]{inputenc}
+  \usetikzlibrary{decorations.pathmorphing}
 
-%%}
+  %%}
 
-\title{MRS lab ROS platform Cheat Sheet}
+  \title{MRS lab ROS platform Cheat Sheet}
 
-\advance\topmargin-.8in
-\advance\textheight3in
-\advance\textwidth3in
-\advance\oddsidemargin-1.5in
-\advance\evensidemargin-1.5in
-\parindent0pt
-\parskip2pt
+  \advance\topmargin-.8in
+  \advance\textheight3in
+  \advance\textwidth3in
+  \advance\oddsidemargin-1.5in
+  \advance\evensidemargin-1.5in
+  \parindent0pt
+  \parskip2pt
 
-\newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
+  \newcommand{\hr}{\centerline{\rule{3.5in}{1pt}}}
 
-%\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
+  %\colorbox[HTML]{e4e4e4}{\makebox[\textwidth-2\fboxsep][l]{texto}
 
-\begin{document}
+  \begin{document}
 
-\begin{center}{\huge{\textbf{MRS lab ROS platform Cheat Sheet}}}\\
-  {\large by Tomas Baca @ Multi-robot Systems (MRS), v1.1.0}
-\end{center}
+  \begin{center}{\huge{\textbf{MRS lab ROS platform Cheat Sheet}}}\\
+    {\large by Tomas Baca @ Multi-robot Systems (MRS), v1.1.0}
+  \end{center}
 
-\begin{multicols*}{2}
+  \begin{multicols*}{2}
 
-  \tikzstyle{mybox} = [draw=black, fill=white, very thick,
-  rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
-  \tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
+    \tikzstyle{mybox} = [draw=black, fill=white, very thick,
+    rectangle, rounded corners, inner sep=10pt, inner ysep=10pt]
+    \tikzstyle{fancytitle} =[fill=black, text=white, font=\bfseries]
 
-  %%{ TERMINAL BASICS
+    %%{ TERMINAL BASICS
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -67,9 +67,9 @@
                 \textbf{Need more help!} & \texttt{:\$ man [command]} \\ \hline
                 Change directory & \texttt{:\$ cd [path]} \\ \hline
                 Path symbolic links & $\texttt{.}$ -- current directory \\
-                                    & $\texttt{..}$ -- previous directory \\
-                                    & $\texttt{$\sim$}$ -- home directory (also \texttt{\$HOME})\\
-                                    & $\texttt{/}$ -- root directory \\ \hline
+                & $\texttt{..}$ -- previous directory \\
+                & $\texttt{$\sim$}$ -- home directory (also \texttt{\$HOME})\\
+                & $\texttt{/}$ -- root directory \\ \hline
                 create a file & \texttt{:\$ touch [path]} \\
                 remove a file & \texttt{:\$ rm [path]} \\
                 move (also rename) a file & \texttt{:\$ mv [from] [to]} \\
@@ -80,8 +80,8 @@
                 print a variable & \texttt{:\$ echo "the content is: \$VARIABLE"} \\ \hline
                 run a script or executable& \texttt{:\$ ./script.sh, ./program} \\ \hline
                 output redirection & $\texttt{>}$ -- to a file (rewrite) \\
-                                   & $\texttt{>>}$ -- to a file (append) \\
-                                   & $\texttt{|}$ -- pipe to another command \\
+                & $\texttt{>>}$ -- to a file (append) \\
+                & $\texttt{|}$ -- pipe to another command \\
                 redirect to /dev/null & $\texttt{> /dev/null 2>\&1}$ \\ \hline
               \end{tabular}
             }
@@ -91,16 +91,16 @@
             \vspace{-1em}
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Ubuntu terminal - GNU/Linux basics};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Ubuntu terminal - GNU/Linux basics};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ TMUX
+    %%{ TMUX
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -131,16 +131,16 @@
             \vspace{-1em}
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {TMUX - Terminal multiplexer};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {TMUX - Terminal multiplexer};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ VIM
+    %%{ VIM
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
             Vim is not a joke. Although you might not know how to exit it (yet), it is a very powerful tool.
@@ -169,32 +169,32 @@
               Would You Like to Know More? \url{https://www.tutorialspoint.com/vim/}
               \vspace{-1em}
             \end{center}
-          }
+            }
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Vim -- a modern modular text processor};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Vim -- a modern modular text processor};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ GIT
+    %%{ GIT
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{Git is a distributed version control system.
-            Repositories are equal, some are just used as a ``server'' (called \textbf{remote}).
-            Git uses branches to isolate ongoing work on the same project.
-            Branches can be merged to combine the work back into a single piece.
-            Changes in the files should be \textbf{commited}.
+          Repositories are equal, some are just used as a ``server'' (called \textbf{remote}).
+          Git uses branches to isolate ongoing work on the same project.
+          Branches can be merged to combine the work back into a single piece.
+          Changes in the files should be \textbf{commited}.
           Only commit ``runnable'' code.}
           \begin{center}
             \scriptsize{
               \begin{tabular}{lp{8.0cm} r}
                 \hline
                 Cloning a repository & over ssh \texttt{:\$ git clone git@mrs.felk.cvut.cz:uav/uav\_core} \\
-                                     & over https \texttt{:\$ git clone https://github.com/klaxalk/linux-setup} \\
-                                     \hline
+                & over https \texttt{:\$ git clone https://github.com/klaxalk/linux-setup} \\
+                \hline
                 Update origin state & \texttt{:\$ git fetch} \\
                 Update current branch from remote & \texttt{:\$ git pull} \\
                 Update current branch to remote & \texttt{:\$ git push} \\
@@ -218,10 +218,10 @@
                 show log & \texttt{:\$ git log} \\
                 show better log & \texttt{:\$ glog} \\
                 % & -- is an alias for \texttt{:\$ git log --graph --abbrev-commit --date=relative --pretty=format:'\%Cred\%h\%Creset -\%C(yellow)\%d\%Creset \%s \%Cgreen(\%cr) \%C(bold blue)<\%an>\%Creset'} \\
-                  & -- is an alias for \texttt{:\$ git log} with more arguments\\
+                & -- is an alias for \texttt{:\$ git log} with more arguments\\
                 show super forest log & \texttt{:\$ flog} \\
-                                      & -- uses \texttt{~/.scripts/git-forest.sh} \\
-                                      \hline
+                & -- uses \texttt{~/.scripts/git-forest.sh} \\
+                \hline
               \end{tabular}
 
               \vspace{0.2em}
@@ -230,16 +230,16 @@
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Git version control system};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Git version control system};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ .bashrc
+    %%{ .bashrc
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
             When a new terminal is opened and an instance of bash is launched, the \texttt{$\sim$/.bashrc} file is \emph{sourced} (executed while its leftover variables, functions and aliases stay in the context).
@@ -276,16 +276,16 @@
           }
         \end{minipage}
 
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {.bashrc -- Bash configuration};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {.bashrc -- Bash configuration};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ ROS IN LINUX TERMINAL
+    %%{ ROS IN LINUX TERMINAL
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -329,16 +329,16 @@
             \vspace{-1em}
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {ROS in Linux terminal};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {ROS in Linux terminal};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ ROS WORKSPACE STRUCTURE
+    %%{ ROS WORKSPACE STRUCTURE
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \subsubsection*{MRS lab main workspace}
           \begin{center}
@@ -347,8 +347,8 @@
                 \hline
                 path & \texttt{$\sim$/mrs\_workspace/}\\
                 contains & \texttt{src/uav\_core/} -- core MRS repository\\
-                         & \texttt{src/uav\_modules/} -- modules MRS repository\\
-                         \hline
+                & \texttt{src/uav\_modules/} -- modules MRS repository\\
+                \hline
               \end{tabular}
             }
           \end{center}
@@ -359,9 +359,9 @@
                 \hline
                 path & \texttt{$\sim$/workspace}\\
                 contains & \texttt{example\_packages/}\\
-                         & -- \texttt{waypoint\_flier} -- general example\\
-                         & -- \texttt{vision\_example} -- computer vision template\\
-                         \hline
+                & -- \texttt{waypoint\_flier} -- general example\\
+                & -- \texttt{vision\_example} -- computer vision template\\
+                \hline
               \end{tabular}
             }
           \end{center}
@@ -371,12 +371,12 @@
               \begin{tabular}{lp{8.0cm} r}
                 \hline
                 \texttt{build} & generated makefiles and support files\\
-                               & \textbf{do not modify}\\
+                & \textbf{do not modify}\\
                 \texttt{devel} & compiled binaries, libraries and installed headers\\
-                               & \textbf{do not modify}\\
+                & \textbf{do not modify}\\
                 \texttt{src} & package source codes\\
-                             & \textbf{place your stuff in here}\\
-                             \hline
+                & \textbf{place your stuff in here}\\
+                \hline
               \end{tabular}
             }
 
@@ -388,16 +388,16 @@
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {ROS workspace structure};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {ROS workspace structure};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ NAVIGATING AND COMPILING ROS WORKSPACE
+    %%{ NAVIGATING AND COMPILING ROS WORKSPACE
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -426,16 +426,16 @@
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Navigating and compiling ROS workspace};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Navigating and compiling ROS workspace};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ ROS PACKAGE STRUCTURE
+    %%{ ROS PACKAGE STRUCTURE
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize {Some of the following items might be missing, depending on the package use case.}
           \begin{center}
@@ -459,38 +459,38 @@
             \vspace{-1em}
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {ROS package structure};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {ROS package structure};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ ROS VISUALIZATION TOOLS
+    %%{ ROS VISUALIZATION TOOLS
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
               \begin{tabular}{lp{6cm} r}
                 \hline
                 Rviz & 3-D visualization of data and models \\
-                     & \texttt{:\$ rviz} \\
-                     & \texttt{:\$ roslaunch mrs\_testing rviz\_uav1.launch} \\ \hline
+                & \texttt{:\$ rviz} \\
+                & \texttt{:\$ roslaunch mrs\_testing rviz\_uav1.launch} \\ \hline
                 Rqt plot & simple and lightweight plotting \\
-                         & \texttt{:\$ rqt\_plot} \\ \hline
+                & \texttt{:\$ rqt\_plot} \\ \hline
                 Rqt bag & visualizing contents of a rosbag \\
-                        & \texttt{:\$ rqt\_bag} \\ \hline
+                & \texttt{:\$ rqt\_bag} \\ \hline
                 Plot juggler & complex and powerful plotting \\
-                             & \texttt{:\$ rosrun plotjuggler PlotJuggler} \\ \hline
+                & \texttt{:\$ rosrun plotjuggler PlotJuggler} \\ \hline
                 Rqt reconfigure & online parameter setting \\
-                                & \texttt{:\$ rosrun rqt\_reconfigure rqt\_reconfigure} \\ \hline
+                & \texttt{:\$ rosrun rqt\_reconfigure rqt\_reconfigure} \\ \hline
                 Rqt image view & camera images visualization \\
-                               & \texttt{:\$ rqt\_image\_view} \\ \hline
+                & \texttt{:\$ rqt\_image\_view} \\ \hline
                 Gazebo client & Gazebo GUI \\
-                              & \texttt{:\$ gzclient} \\ \hline
+                & \texttt{:\$ gzclient} \\ \hline
                 rqt & Integrates most of the \textit{rqt\_} tools \\
-                    & \texttt{:\$ rqt} \\ \hline
+                & \texttt{:\$ rqt} \\ \hline
               \end{tabular}
             }
 
@@ -499,16 +499,16 @@
             \vspace{-1em}
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {ROS visualization tools};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {ROS visualization tools};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ USEFUL UAV ROS TOPICS AND SERVICES
+    %%{ USEFUL UAV ROS TOPICS AND SERVICES
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
             Following ROS services and topics allow for controlling the UAV from terminal.
@@ -558,119 +558,119 @@
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Useful UAV ROS topics and services};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Useful UAV ROS topics and services};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  \clearpage
+    \clearpage
 
-  %%{ SSH keys
+    %%{ SSH keys
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
             \begin{itemize}
               \setlength\itemsep{0.0em}
-            \item Generate your SSH key by: \texttt{:\$ ssh-keygen -t rsa -b 4096 -C "your\_email@example.com"}.
-            \item The keys are stored in \texttt{$\sim$/.ssh}.
-            \item Show the content of the public key by: \texttt{:\$ cat $\sim$/.ssh/id\_rsa.pub} and copy it to Github or Gitlab.
-            \item Copy your public key over ssh to another machine by: \texttt{:\$ ssh-copy-id user@machine}.
-            \item Entries in the \texttt{$\sim$/.ssh/config} allow connecting to a machine via alias while using an ssh key:
-          \end{itemize}
-          \vspace{-2.8em}
-          \begin{center}
-            \begin{lstlisting}
+              \item Generate your SSH key by: \texttt{:\$ ssh-keygen -t rsa -b 4096 -C "your\_email@example.com"}.
+              \item The keys are stored in \texttt{$\sim$/.ssh}.
+              \item Show the content of the public key by: \texttt{:\$ cat $\sim$/.ssh/id\_rsa.pub} and copy it to Github or Gitlab.
+              \item Copy your public key over ssh to another machine by: \texttt{:\$ ssh-copy-id user@machine}.
+              \item Entries in the \texttt{$\sim$/.ssh/config} allow connecting to a machine via alias while using an ssh key:
+            \end{itemize}
+            \vspace{-2.8em}
+            \begin{center}
+              \begin{lstlisting}
                         host mrs
                              hostname mrs.felk.cvut.cz
                              user git
                              identityfile ~/.ssh/id_rsa
-            \end{lstlisting}
-          \end{center}
-          \vspace{-3.0em}
-        }
-      \end{minipage}
-    };
-  \node[fancytitle, right=10pt] at (box.north west) {SSH keys};
-\end{tikzpicture}
+              \end{lstlisting}
+            \end{center}
+            \vspace{-3.0em}
+          }
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {SSH keys};
+    \end{tikzpicture}
 
-%%}
+    %%}
 
-%%{ UAV SPAWNING
+    %%{ UAV SPAWNING
 
-\begin{tikzpicture}
-  \node [mybox] (box){%
-      \begin{minipage}{0.47\textwidth}
-        \scriptsize{
-          We use the \texttt{:\$ rosrun mrs\_simulation spawn} command to dynamically load a UAV into the Gazebo/ROS simulator.
-          Various arguments can be used to influence the type of the drone, its sensors, its starting location and additional onboard hardware.
-          Type \texttt{:\$ rosrun mrs\_simulation spawn --help} to see the complete list, here are some notable examples:
-          \begin{center}
-            \begin{tabular}{lp{5cm} r}
-              \hline
-              start and stop the onboard firmware automatically & \texttt{--run --delete} \\
-              use initial position from a CSV file (id, x, y, z, heading) & \texttt{--file [file]} \\
-              \hline
-              selecting UAV type (f450, f550, t650) & \texttt{--f450}, \texttt{--f550}, \texttt{--t650} \\
-              list available sensors for the selected UAV type & \texttt{--available-sensors} \\
-              \hline
-              add down-facing rangefinder & \texttt{--enable-rangefinder} \\
-              add front-facing camera & \texttt{--enable-bluefox-camera} \\
-              add front-facing RealSense & \texttt{--enable-realsense-front} \\
-              add 2-D rangefinder & \texttt{--enable-rplidar} \\
-              add 3-D rangefinder & \texttt{--enable-velodyne} \\
-              \hline
-              add UV camera for UVDAR & \texttt{--enable-uv-camera} \\
-              add UV leds for UVDAR & \texttt{--enable-uv-leds} \\
-              set UV led frequencies & \texttt{--led-frequencies [L] [R]} \\
-              \hline
-              add super long pendulum & \texttt{--enable-pendulum} \\
-              add ball holder & \texttt{--enable-ball-holder} \\
-              \hline
-            \end{tabular}
-          \end{center}
-          A typical simulation spawning looks like:\\
-          \texttt{:\$ rosrun mrs\_simulation spawn 1 --f450 --run --delete --enable-rangefinder}
-          \vspace{-1em}
-        }
-      \end{minipage}
-    };
-  \node[fancytitle, right=10pt] at (box.north west) {Spawning a UAV in Gazebo simulator};
-\end{tikzpicture}
-
-%%}
-
-%%{ ROS on a remote machine
-
-\begin{tikzpicture}
-  \node [mybox] (box){%
-      \begin{minipage}{0.47\textwidth}
-        \begin{center}
+    \begin{tikzpicture}
+      \node [mybox] (box){%
+        \begin{minipage}{0.47\textwidth}
           \scriptsize{
-            \begin{itemize}
-              \setlength\itemsep{0.0em}
-            \item Add you \textbf{local} machine to the \textbf{remote} machine's \texttt{/etc/hosts} and vice versa.
-            \item Make sure the machines can ping each other using their hostname.
-            \item Add \texttt{export ROS\_MASTER\_URI=http://localhost:11311} to the \textbf{remote}'s .bashrc.
-            \item Add \texttt{export ROS\_MASTER\_URI=http://hostname:11311} to the \textbf{local}'s .bashrc, where \textbf{hostname} is the \textbf{remote}'s hostname.
-            \item Run roscore only on the \textbf{remote} machine.
-          \end{itemize}
-        }
-        \vspace{-0.8em}
-      \end{center}
-    \end{minipage}
-  };
-\node[fancytitle, right=10pt] at (box.north west) {ROS on a remote machine};
-  \end{tikzpicture}
+            We use the \texttt{:\$ rosrun mrs\_simulation spawn} command to dynamically load a UAV into the Gazebo/ROS simulator.
+            Various arguments can be used to influence the type of the drone, its sensors, its starting location and additional onboard hardware.
+            Type \texttt{:\$ rosrun mrs\_simulation spawn --help} to see the complete list, here are some notable examples:
+            \begin{center}
+              \begin{tabular}{lp{5cm} r}
+                \hline
+                start and stop the onboard firmware automatically & \texttt{--run --delete} \\
+                use initial position from a CSV file (id, x, y, z, heading) & \texttt{--file [file]} \\
+                \hline
+                selecting UAV type (f450, f550, t650) & \texttt{--f450}, \texttt{--f550}, \texttt{--t650} \\
+                list available sensors for the selected UAV type & \texttt{--available-sensors} \\
+                \hline
+                add down-facing rangefinder & \texttt{--enable-rangefinder} \\
+                add front-facing camera & \texttt{--enable-bluefox-camera} \\
+                add front-facing RealSense & \texttt{--enable-realsense-front} \\
+                add 2-D rangefinder & \texttt{--enable-rplidar} \\
+                add 3-D rangefinder & \texttt{--enable-velodyne} \\
+                \hline
+                add UV camera for UVDAR & \texttt{--enable-uv-camera} \\
+                add UV leds for UVDAR & \texttt{--enable-uv-leds} \\
+                set UV led frequencies & \texttt{--led-frequencies [L] [R]} \\
+                \hline
+                add super long pendulum & \texttt{--enable-pendulum} \\
+                add ball holder & \texttt{--enable-ball-holder} \\
+                \hline
+              \end{tabular}
+            \end{center}
+            A typical simulation spawning looks like:\\
+            \texttt{:\$ rosrun mrs\_simulation spawn 1 --f450 --run --delete --enable-rangefinder}
+            \vspace{-1em}
+          }
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Spawning a UAV in Gazebo simulator};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ THE MATH THAT EVERYBODY NEEDS, BUT NOBODY REMEMBERS
+    %%{ ROS on a remote machine
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
+        \begin{minipage}{0.47\textwidth}
+          \begin{center}
+            \scriptsize{
+              \begin{itemize}
+                \setlength\itemsep{0.0em}
+                \item Add you \textbf{local} machine to the \textbf{remote} machine's \texttt{/etc/hosts} and vice versa.
+                \item Make sure the machines can ping each other using their hostname.
+                \item Add \texttt{export ROS\_MASTER\_URI=http://localhost:11311} to the \textbf{remote}'s .bashrc.
+                \item Add \texttt{export ROS\_MASTER\_URI=http://hostname:11311} to the \textbf{local}'s .bashrc, where \textbf{hostname} is the \textbf{remote}'s hostname.
+                \item Run roscore only on the \textbf{remote} machine.
+              \end{itemize}
+            }
+            \vspace{-0.8em}
+          \end{center}
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {ROS on a remote machine};
+    \end{tikzpicture}
+
+    %%}
+
+    %%{ THE MATH THAT EVERYBODY NEEDS, BUT NOBODY REMEMBERS
+
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{multicols*}{2}
             \begin{minipage}{0.30\textwidth}
@@ -704,29 +704,29 @@
             \end{minipage}
           \end{multicols*}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {The math that everybody needs, but nobody remembers};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {The math that everybody needs, but nobody remembers};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ QR CODE
+    %%{ QR CODE
 
-  % \begin{minipage}{0.40\textwidth}
-  %   \vspace{2.5em}
-  %   \begin{left}
-  %     \includegraphics[height=3.0cm]{./fig/qr.png}
-  %   \end{left}
-  % \end{minipage}
+    % \begin{minipage}{0.40\textwidth}
+    %   \vspace{2.5em}
+    %   \begin{left}
+    %     \includegraphics[height=3.0cm]{./fig/qr.png}
+    %   \end{left}
+    % \end{minipage}
 
-  %%}
+    %%}
 
-  \vspace{10em}
+    \vspace{10em}
 
-  %%{ QUATERNIONS
+    %%{ QUATERNIONS
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -741,7 +741,7 @@
               \end{tabular}
               \\
               \vspace{1em}
-              Transforming various representations of rotation using \texttt{mrs\_lib::AttitudeConverter}:
+              Converting various representations of rotation using \texttt{mrs\_lib::AttitudeConverter}:
               \vspace{-0.5em}
               \begin{lstlisting}
 # every combination is possible
@@ -760,16 +760,16 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Quaternions (unit quaternions)};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Quaternions (unit quaternions)};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ COMMON ROS HANDLERS IN C++
+    %%{ COMMON ROS HANDLERS IN C++
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -794,16 +794,16 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Common ROS handlers in \verb!C++!};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Common ROS handlers in \verb!C++!};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ COMMON ROS HANDLERS IN Python
+    %%{ COMMON ROS HANDLERS IN Python
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -827,16 +827,16 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Common ROS handlers in Python};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Common ROS handlers in Python};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ COMMON EIGEN OPERATIONS IN \VERB!C++!
+    %%{ COMMON EIGEN OPERATIONS IN \VERB!C++!
 
-  \begin{tikzpicture}
-    \node [mybox] (box){%
+    \begin{tikzpicture}
+      \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \begin{center}
             \scriptsize{
@@ -852,7 +852,7 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
                 Matrix column & \texttt{A.col(n)} & \tiny\texttt{\#include <Eigen/Dense>} & for everything\\
                 no. of rows and cols & \texttt{A.rows()}, \texttt{A.cols()} & \tiny\texttt{\#include <Eigen/Geometry>} & for cross\\
                 Sub-matrix & \texttt{A.block(i, j, rows, cols)} & \tiny\texttt{\#include <Eigen/QR>} & for QR decomposition\\
-              \hline
+                \hline
               \end{tabular}
               \vspace{0.2em}
               Would You Like to Know More? \url{https://eigen.tuxfamily.org/dox/AsciiQuickReference.txt}
@@ -860,41 +860,152 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
             }
           \end{center}
         \end{minipage}
-      };
-    \node[fancytitle, right=10pt] at (box.north west) {Common Eigen operations in \verb!C++!};
-  \end{tikzpicture}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Common Eigen operations in \verb!C++!};
+    \end{tikzpicture}
 
-  %%}
+    %%}
 
-  %%{ WOULD YOU LIKE TO KNOW MORE
+    \clearpage
 
-  % \begin{minipage}{0.40\textwidth}
-  %   \vspace{3.7em}
-  %   \begin{center}
-  %     \begin{multicols*}{2}
+    %%{ GDB
 
-  %       \begin{minipage}{0.30\textwidth}
-  %         \begin{left}
-  %           \includegraphics[height=3.0cm]{./fig/more.png}
-  %         \end{left}
-  %       \end{minipage}
+    \begin{tikzpicture}
+      \node [mybox] (box){%
+        \begin{minipage}{0.47\textwidth}
+          \scriptsize{If you're experiencing crashes of your \verb!C!/\verb!C++! ROS node/nodelet or if your program is not behaving as expected in general and you want to inspect it, you can reach for a debugger. A debugger (namely GDB in our case) enables you to inspect the state of the program after a crash or at any point during the program runtime and is a very powerful tool for rooting out bugs.}
+          \begin{center}
+            \scriptsize{
+              \vspace{-1.5em}
+              \begin{tabular}{lll}
+                \hline
+                \textbf{command}            & \textbf{description}                          & \textbf{comment}                                     \\
+                \hline
+                \texttt{b filename.cpp:310} & breakpoint in \emph{filename.cpp} at line 310 &                                                      \\
+                \texttt{bt}                 & backtrace                                     &                                                      \\
+                \texttt{f <num>}            & change to frame \texttt{<num>}                & \texttt{<num>} = the number from bt                  \\
+                \texttt{s}                  & step in function                              &                                                      \\
+                \texttt{n}                  & step to the next line                         &                                                      \\
+                \texttt{fin}                & finish function                               & in case you accidentaly step into                    \\
+                \texttt{c}                  & continue                                      & resume program until breakpoint or crash             \\
+                \texttt{p <num>}            & print variable                                & \texttt{<num>} = variable name                       \\
+                \texttt{wh}                 & open window with code (tui)                   & actually sets window height                          \\
+                \texttt{tui enable/disable} & open/close window with code (tui)             & the official way of wh                               \\
+                \texttt{focus cmd/src}      & changes focus in gdb tui                      & if you want to use arrows for cmd hist.              \\
+                \texttt{up/down}            & jumps in the frames ip/down                   &                                                      \\
+                \texttt{<enter>}            & repeats the last command                      &                                                      \\
+                \texttt{u <num>}            & continue until line \texttt{<num>}            & \texttt{<num>} = the line number in the current file \\
+                \texttt{ref}                & refresh the screen                            & in case of some visual problems                      \\
+                \hline
+                the \emph{.gdbinit} file    & put pre-start settings in here                & an example is in the file                            \\
+                \hline
+              \end{tabular}
+            }
 
-  %       \begin{minipage}{0.70\textwidth}
-  %         \begin{center}
-  %           \vspace{1.8em}
-  %           \huge \textbf{visit the MRS lab!}\\
-  %           \huge \textbf{(and use Google)}\\
-  %         \end{center}
-  %       \end{minipage}
+            \vspace{0.2em}
+            Would You Like to Know More? \url{https://ctu-mrs.github.io/docs/software/gdb.html}
+            \vspace{-1em}
+          \end{center}
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {GDB - GNU Debugeer};
+    \end{tikzpicture}
 
-  %     \end{multicols*}
-  %   \end{center}
-  % \end{minipage}
+    %%}
 
-  %%}
+    %%{ mrs_lib::Transformer
 
-\end{multicols*}
+    \begin{tikzpicture}
+      \node [mybox] (box){%
+        \begin{minipage}{0.47\textwidth}
+          \scriptsize{
+            Although \emph{ros::tf2} library provides options for transforming data between frames of references, it is far from friendly-to-use.
+            Therefore, we have built a wrapper that simplifies most of the tasks.}
+          \begin{center}
+            \scriptsize{
+              \begin{tabular}{ll}
+                \hline
+                \verb!include <mrs_lib/transformer.h>! & include this \\
+                \verb!mrs_lib::Transformer transformer_;! & declare \\
+                \verb!transformer_ = mrs_lib::Transformer(<node_name>, <uav_name>);! & initialize \\
+                \hline
+              \end{tabular}
 
-\includepdf{fig/vim.pdf}
+              \vspace{-0.5em}
+              \begin{itemize}
+                \setlength\itemsep{0.0em}
+                \item \texttt{mrs\_lib::Transformer} is capable of inferring full name of a UAV: \texttt{gps\_origin -> uav3/gps\_origin}.
+                \item \texttt{mrs\_lib::Transformer} finds the latest available \texttt{<tf>} if there is none available for \texttt{<time>}
+                \item \texttt{mrs\_lib::Transformer} can transform from/to \texttt{latlon\_origin}, our custom GPS frame with deg. of lat/lon
+              \end{itemize}
+              \vspace{-0.5em}
+              Getting transformation \texttt{<from>} frame \texttt{<to>} frame in particular \texttt{time}
+              \vspace{-0.5em}
+              \begin{lstlisting}
+          if (auto ret = transformer_.getTransform(<from>, <to>, <time>) {
+            mrs_lib::TransformStamped tf = ret.value();
+          }
+              \end{lstlisting}
+
+              \vspace{0.0em}
+              Transforming \texttt{<what>} \texttt{<to>} frame using the transformation \texttt{<tf>}:
+              \vspace{-0.5em}
+              \begin{lstlisting}
+          if (auto ret = transformer_.transform(<transformation>, <what>) {
+            auto result = ret.value();
+          }
+              \end{lstlisting}
+
+              \vspace{0.0em}
+              Transforming \texttt{<what>} \texttt{<to>} only once (finds the \texttt{<tf>} automatically):
+              \vspace{-0.5em}
+              \begin{lstlisting}
+          if (auto ret = transformer_.transformSingle(<to>, <what>) {
+            auto result = ret.value();
+          }
+              \end{lstlisting}
+
+              \vspace{0.2em}
+              Would You Like to Know More? \url{https://ctu-mrs.github.io/mrs_lib}
+              \vspace{-1em}
+            }
+          \end{center}
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {\texttt{mrs\_lib::Transformer}, MRS \texttt{ros::tf2 wrapper}};
+    \end{tikzpicture}
+
+    %%}
+
+    %%{ WOULD YOU LIKE TO KNOW MORE
+
+    % \begin{minipage}{0.40\textwidth}
+    %   \vspace{3.7em}
+    %   \begin{center}
+    %     \begin{multicols*}{2}
+
+    %       \begin{minipage}{0.30\textwidth}
+    %         \begin{left}
+    %           \includegraphics[height=3.0cm]{./fig/more.png}
+    %         \end{left}
+    %       \end{minipage}
+
+    %       \begin{minipage}{0.70\textwidth}
+    %         \begin{center}
+    %           \vspace{1.8em}
+    %           \huge \textbf{visit the MRS lab!}\\
+    %           \huge \textbf{(and use Google)}\\
+    %         \end{center}
+    %       \end{minipage}
+
+    %     \end{multicols*}
+    %   \end{center}
+    % \end{minipage}
+
+    %%}
+
+  \end{multicols*}
+
+  \includepdf{fig/vim.pdf}
 
 \end{document}
