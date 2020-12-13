@@ -604,17 +604,18 @@
       \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
-            We use the \texttt{:\$ rosrun mrs\_simulation spawn} command to dynamically load a UAV into the Gazebo/ROS simulator.
+            We use a ROS node called \texttt{mrs\_drone\_spawner} to dynamically load a UAV into the Gazebo/ROS simulator. 
+            By default, it starts automatically with Gazebo using \texttt{:\$ roslaunch mrs\_simulation simulation.launch}. \\
+            Spawn a drone by calling a service \texttt{:\$ rosservice call /mrs\_drone\_spawner/spawn "1 --enable-rangefinder"} \\
+            If the service does not exist, start the spawner by \texttt{:\$ roslaunch mrs\_simulation mrs\_drone\_spawner.launch} \\
             Various arguments can be used to influence the type of the drone, its sensors, its starting location and additional onboard hardware.
-            Type \texttt{:\$ rosrun mrs\_simulation spawn --help} to see the complete list, here are some notable examples:
+            Run the command \texttt{:\$ rosrun mrs\_simulation mrs\_drone\_spawner.py} to see the complete list. Here are some notable examples:
             \begin{center}
               \begin{tabular}{lp{5cm} r}
                 \hline
-                start and stop the onboard firmware automatically & \texttt{--run --delete} \\
-                use initial position from a CSV file (id, x, y, z, heading) & \texttt{--file [file]} \\
-                \hline
+                use initial position from a CSV file (id, x, y, z, heading) & \texttt{--file [path\_to\_file]} \\
+                use initial position from an argument & \texttt{--pos [x y z heading]} \\
                 selecting UAV type (f450, f550, t650) & \texttt{--f450}, \texttt{--f550}, \texttt{--t650} \\
-                list available sensors for the selected UAV type & \texttt{--available-sensors} \\
                 \hline
                 add down-facing rangefinder & \texttt{--enable-rangefinder} \\
                 add front-facing camera & \texttt{--enable-bluefox-camera} \\
@@ -624,7 +625,7 @@
                 \hline
                 add UV camera for UVDAR & \texttt{--enable-uv-camera} \\
                 add UV leds for UVDAR & \texttt{--enable-uv-leds} \\
-                set UV led frequencies & \texttt{--led-frequencies [L] [R]} \\
+                set UV led frequencies (left) & \texttt{--uvled-fr-l [freq]} \\
                 \hline
                 add super long pendulum & \texttt{--enable-pendulum} \\
                 add ball holder & \texttt{--enable-ball-holder} \\
@@ -632,7 +633,7 @@
               \end{tabular}
             \end{center}
             A typical simulation spawning looks like:\\
-            \texttt{:\$ rosrun mrs\_simulation spawn 1 --f450 --run --delete --enable-rangefinder}
+            \texttt{:\$ rosservice call /mrs\_drone\_spawner/spawn "1 --f450 --enable-rangefinder"}
             \vspace{-1em}
           }
         \end{minipage}
