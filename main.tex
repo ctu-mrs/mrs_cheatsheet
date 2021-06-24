@@ -652,7 +652,7 @@
                 \setlength\itemsep{0.0em}
                 \item Add your \textbf{local} machine hostname to the \textbf{remote} machine's hostname \texttt{/etc/hosts} and vice versa.
                 \item Make sure the machines can ping each other using their hostnames.
-                \item Add \texttt{export ROS\_MASTER\_URI=http://<localhost>:11311} to the \textbf{remote}'s (robot's) .bashrc.
+                \item Add \texttt{export ROS\_MASTER\_URI=http://localhost:11311} to the \textbf{remote}'s (robot's) .bashrc.
                 \item Add \texttt{export ROS\_MASTER\_URI=http://<hostname>:11311} to the \textbf{local}'s .bashrc, where \textbf{hostname} is the \textbf{remote}'s hostname.
                 \item Add \texttt{export ROS\_IP=<your IP>} to the \textbf{local}'s .bashrc, where the IP should be of the interface used to communicate with the robot.
                 \item \textbf{Do NOT export ROS\_IP in the remote's (robot's) .bashrc}
