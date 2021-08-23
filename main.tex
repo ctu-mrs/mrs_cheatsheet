@@ -656,6 +656,7 @@
                 \item Add \texttt{export ROS\_MASTER\_URI=http://<hostname>:11311} to the \textbf{local}'s .bashrc, where \textbf{hostname} is the \textbf{remote}'s hostname.
                 \item Add \texttt{export ROS\_IP=<your IP>} to the \textbf{local}'s .bashrc, where the IP should be of the interface used to communicate with the robot.
                 \item \textbf{Do NOT export ROS\_IP in the remote's (robot's) .bashrc}
+                \item \textbf{Remove the remote's (robot's) own hostname in \texttt{/etc/hosts} except of \texttt{127.0.1.1}.}
                 \item Run roscore only on the \textbf{remote} machine.
               \end{itemize}
             }
