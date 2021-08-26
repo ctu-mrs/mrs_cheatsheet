@@ -602,7 +602,7 @@
       \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
-            We use a ROS node called \texttt{mrs\_drone\_spawner} to dynamically load a UAV into the Gazebo/ROS simulator. 
+            We use a ROS node called \texttt{mrs\_drone\_spawner} to dynamically load a UAV into the Gazebo/ROS simulator.
             By default, it starts automatically with Gazebo using \texttt{:\$ roslaunch mrs\_simulation simulation.launch}. \\
             Spawn a drone by calling a service \texttt{:\$ rosservice call /mrs\_drone\_spawner/spawn "1 --enable-rangefinder"} \\
             If the service does not exist, start the spawner by \texttt{:\$ roslaunch mrs\_simulation mrs\_drone\_spawner.launch} \\
@@ -921,7 +921,7 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
       \node [mybox] (box){%
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
-            Although \emph{ros::tf2} library provides options for transforming data between frames of references, it is far from friendly-to-use.
+            Although \emph{ros::tf2} library provides options for transforming data between frames of reference, it is far from friendly-to-use.
             Therefore, we have built a wrapper that simplifies most of the tasks.}
           \begin{center}
             \scriptsize{
