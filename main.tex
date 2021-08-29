@@ -881,25 +881,28 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
               \vspace{-1.5em}
               \begin{tabular}{lll}
                 \hline
-                \textbf{command}            & \textbf{description}                          & \textbf{comment}                                     \\
+                \textbf{command}             & \textbf{description}                          & \textbf{comment}                                     \\
                 \hline
-                \texttt{b filename.cpp:310} & breakpoint in \emph{filename.cpp} at line 310 &                                                      \\
-                \texttt{bt}                 & backtrace                                     &                                                      \\
-                \texttt{f <num>}            & change to frame \texttt{<num>}                & \texttt{<num>} = the number from bt                  \\
-                \texttt{s}                  & step in function                              &                                                      \\
-                \texttt{n}                  & step to the next line                         &                                                      \\
-                \texttt{fin}                & finish function                               & in case you accidentaly step into                    \\
-                \texttt{c}                  & continue                                      & resume program until breakpoint or crash             \\
-                \texttt{p <num>}            & print variable                                & \texttt{<num>} = variable name                       \\
-                \texttt{wh}                 & open window with code (tui)                   & actually sets window height                          \\
-                \texttt{tui enable/disable} & open/close window with code (tui)             & the official way of wh                               \\
-                \texttt{focus cmd/src}      & changes focus in gdb tui                      & if you want to use arrows for cmd hist.              \\
-                \texttt{up/down}            & jumps in the frames ip/down                   &                                                      \\
-                \texttt{<enter>}            & repeats the last command                      &                                                      \\
-                \texttt{u <num>}            & continue until line \texttt{<num>}            & \texttt{<num>} = the line number in the current file \\
-                \texttt{ref}                & refresh the screen                            & in case of some visual problems                      \\
+                \texttt{b filename.cpp:310}  & breakpoint in \emph{filename.cpp} at line 310 &                                                      \\
+                \texttt{bt}                  & backtrace                                     &                                                      \\
+                \texttt{f <num>}             & change to frame \texttt{<num>}                & \texttt{<num>} = the number from bt                  \\
+                \texttt{s}                   & step in function                              &                                                      \\
+                \texttt{n}                   & step to the next line                         &                                                      \\
+                \texttt{fin}                 & finish function                               & in case you accidentaly step into                    \\
+                \texttt{c}                   & continue                                      & resume program until breakpoint or crash             \\
+                \texttt{p <num>}             & print variable                                & \texttt{<num>} = variable name                       \\
+                \texttt{wh}                  & open window with code (tui)                   & actually sets window height                          \\
+                \texttt{tui enable/disable}  & open/close window with code (tui)             & the official way of wh                               \\
+                \texttt{focus cmd/src}       & changes focus in gdb tui                      & if you want to use arrows for cmd hist.              \\
+                \texttt{up/down}             & jumps in the frames ip/down                   &                                                      \\
+                \texttt{<enter>}             & repeats the last command                      &                                                      \\
+                \texttt{u <num>}             & continue until line \texttt{<num>}            & \texttt{<num>} = the line number in the current file \\
+                \texttt{ref}                 & refresh the screen                            & in case of some visual problems                      \\
+                \texttt{run}                 & run the executable                            &                                                      \\
+                \texttt{thread apply all \#} & apply command \# to all threads               &                                                      \\
                 \hline
-                the \emph{.gdbinit} file    & put pre-start settings in here                & an example is in the file                            \\
+                the \emph{.gdbinit} file     & put pre-start settings in here                & an example is in the file                            \\
+                --args exec arg1 ...         & running executable with args                  &                                                      \\
                 \hline
               \end{tabular}
             }
