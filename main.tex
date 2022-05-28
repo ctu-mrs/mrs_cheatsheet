@@ -932,15 +932,15 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
                 \hline
                 \verb!include <mrs_lib/transformer.h>! & include this \\
                 \verb!mrs_lib::Transformer transformer_;! & declare \\
-                \verb!transformer_ = mrs_lib::Transformer(<node_name>, <uav_name>);! & initialize \\
+                \verb!transformer_ = mrs_lib::Transformer(<node_name>);! & initialize \\
                 \hline
               \end{tabular}
 
               \vspace{-0.5em}
               \begin{itemize}
                 \setlength\itemsep{0.0em}
-                \item \texttt{mrs\_lib::Transformer} is capable of inferring full name of a UAV: \texttt{gps\_origin -> uav3/gps\_origin}.
-                \item \texttt{mrs\_lib::Transformer} finds the latest available \texttt{<tf>} if there is none available for \texttt{<time>}
+                \item \texttt{mrs\_lib::Transformer} is capable of inferring full name of a UAV: \texttt{gps\_origin -> uav3/gps\_origin} (after enabling by \verb!transformer_.setDefaultPrefix(<uav_name>);!.
+                \item \texttt{mrs\_lib::Transformer} finds the latest available \texttt{<tf>} if there is none available for \texttt{<time>} (after enabling by \verb!transformer_.retryLookupNewest()!
                 \item \texttt{mrs\_lib::Transformer} can transform from/to \texttt{latlon\_origin}, our custom GPS frame with deg. of lat/lon
               \end{itemize}
               \vspace{-0.5em}
@@ -956,7 +956,7 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
               Transforming \texttt{<what>} \texttt{<to>} frame using the transformation \texttt{<tf>}:
               \vspace{-0.5em}
               \begin{lstlisting}
-          if (auto ret = transformer_.transform(<transformation>, <what>) {
+          if (auto ret = transformer_.transform(<what>, <transformation>) {
             auto result = ret.value();
           }
               \end{lstlisting}
@@ -965,7 +965,7 @@ double heading1                           = AttitudeConverter(tf2_quat).getHeadi
               Transforming \texttt{<what>} \texttt{<to>} only once (finds the \texttt{<tf>} automatically):
               \vspace{-0.5em}
               \begin{lstlisting}
-          if (auto ret = transformer_.transformSingle(<to>, <what>) {
+          if (auto ret = transformer_.transformSingle(<what>, <to>) {
             auto result = ret.value();
           }
               \end{lstlisting}
