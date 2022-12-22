@@ -750,7 +750,7 @@
 tf2::Quaternion           tf2_quat        = AttitudeConverter(roll, pitch, yaw);
 tf2::Matrix3x3            tf2_matrix      = AttitudeConverter(tf2_quat);
 geometry_msgs::Quaternion quaternion      = AttitudeConverter(tf2_matrix);
-Eigen::Quaterniond        eig_quat        = AttitudeConverter(gernion);
+Eigen::Quaterniond        eig_quat        = AttitudeConverter(guaternion);
 Eigen::AngleAxis<double>  eig_angle_axis  = AttitudeConverter(eig_quat);
 Eigen::Matrix3d           eig_matrix      = AttitudeConverter(eig_angle_axis);
 auto [roll2, pitch2, yaw2]                = AttitudeConverter(eig_matrix);
