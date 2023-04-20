@@ -651,6 +651,7 @@
               \begin{itemize}
                 \setlength\itemsep{0.0em}
                 \item Add your \textbf{local} machine hostname to the \textbf{remote} machine's hostname \texttt{/etc/hosts} and vice versa.
+                \item Make sure the \textbf{robot's} \texttt{/etc/hosts} contains the '\texttt{127.0.1.1 <robot's hostname>}' entry.
                 \item Make sure the machines can ping each other using their hostnames.
                 \item Add \texttt{export ROS\_MASTER\_URI=http://localhost:11311} to the \textbf{remote}'s (robot's) .bashrc.
                 \item Add \texttt{export ROS\_MASTER\_URI=http://<hostname>:11311} to the \textbf{local}'s .bashrc, where \textbf{hostname} is the \textbf{remote}'s hostname.
