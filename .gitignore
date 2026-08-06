@@ -189,3 +189,6 @@ TSWLatexianTemp*
 
 # KBibTeX
 *~[0-9]*
+
+output
+thumbnail.jpg-*.jpg
