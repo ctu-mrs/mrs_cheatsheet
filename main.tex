@@ -64,21 +64,21 @@
                 \hline
                 New terminal & \texttt{Ctrl+Alt+t} \\ \hline
                 \textbf{Need help} & append \texttt{--help} after command\\
-                \textbf{Need more help!} & \texttt{:\$ man [command]} \\ \hline
-                Change directory & \texttt{:\$ cd [path]} \\ \hline
+                \textbf{Need more help!} & \texttt{\$ man [command]} \\ \hline
+                Change directory & \texttt{\$ cd [path]} \\ \hline
                 Path symbolic links & $\texttt{.}$ -- current directory \\
                 & $\texttt{..}$ -- previous directory \\
                 & $\texttt{\textasciitilde}$ -- home directory (also \texttt{\$HOME})\\
                 & $\texttt{/}$ -- root directory \\ \hline
-                create a file & \texttt{:\$ touch [path]} \\
-                remove a file & \texttt{:\$ rm [path]} \\
-                move (also rename) a file & \texttt{:\$ mv [from] [to]} \\
-                copy a file & \texttt{:\$ cp [from] [to]} \\
-                print a file & \texttt{:\$ cat [path]} \\
-                edit a file & \texttt{:\$ vim [path]}, \texttt{:\$ nano [path]} \\ \hline
-                set a variable & \texttt{:\$ VARIABLE="dog", VARIABLE=3.0} \\
-                print a variable & \texttt{:\$ echo "the content is: \$VARIABLE"} \\ \hline
-                run a script or executable& \texttt{:\$ ./script.sh, ./program} \\ \hline
+                create a file & \texttt{\$ touch [path]} \\
+                remove a file & \texttt{\$ rm [path]} \\
+                move (also rename) a file & \texttt{\$ mv [from] [to]} \\
+                copy a file & \texttt{\$ cp [from] [to]} \\
+                print a file & \texttt{\$ cat [path]} \\
+                edit a file & \texttt{\$ vim [path]}, \texttt{\$ nano [path]} \\ \hline
+                set a variable & \texttt{\$ VARIABLE="dog", VARIABLE=3.0} \\
+                print a variable & \texttt{\$ echo "the content is: \$VARIABLE"} \\ \hline
+                run a script or executable& \texttt{\$ ./script.sh, ./program} \\ \hline
                 output redirection & $\texttt{>}$ -- to a file (rewrite) \\
                 & $\texttt{>>}$ -- to a file (append) \\
                 & $\texttt{|}$ -- pipe to another command \\
@@ -106,9 +106,9 @@
             \scriptsize{
               \begin{tabular}{lp{4.0cm} r}
                 \hline
-                Run tmux & \texttt{:\$ tmux} \\
-                List all sessions & \texttt{:\$ tmux ls} \\
-                Attach to a session & \texttt{:\$ tmux a -t [session name]} \\
+                Run tmux & \texttt{\$ tmux} \\
+                List all sessions & \texttt{\$ tmux ls} \\
+                Attach to a session & \texttt{\$ tmux a -t [session name]} \\
                 \hline
                 New window (tab) & \texttt{Ctrl+t}\\
                 New horizontal split & \texttt{Ctrl+9}\\
@@ -118,7 +118,7 @@
                 \hline
                 \textbf{prefix} & \texttt{Ctrl+a}\\
                 \hline
-                Killing window & \textbf{prefix} \texttt{x}, \texttt{:\$ exit}, \texttt{:\$ :q}\\
+                Killing window & \textbf{prefix} \texttt{x}, \texttt{\$ exit}, \texttt{\$ :q}\\
                 Killing session & \textbf{prefix} \texttt{k}\\
                 Detach from session & \textbf{prefix} \texttt{d}\\
                 Enter vim mode (scrolling, copying) & \texttt{F2}, \textbf{prefix} \texttt{$[$}\\
@@ -149,7 +149,7 @@
             Moreover, its modal editing paradigm is very intuitive.
             Lastly, when you learn how to control vim, you also learn to control other tools such as \emph{Linux manual pages}, \emph{ranger}, \emph{less} and much more.
             Even gmail uses vim-like controls natively.
-            Run \texttt{:\$ vimtutor} to start learning vim using an interactive ``file tutorial''.
+            Run \texttt{\$ vimtutor} to start learning vim using an interactive ``file tutorial''.
             Here are some simple commands:
             \begin{center}
               \begin{tabular}{lp{1cm} r lp{1cm} r}
@@ -192,34 +192,34 @@
             \scriptsize{
               \begin{tabular}{lp{8.0cm} r}
                 \hline
-                Cloning a repository & over ssh \texttt{:\$ git clone git@github.com:ctu-mrs/mrs\_uav\_core.git} \\
-                & over https \texttt{:\$ git clone https://github.com/klaxalk/linux-setup} \\
+                Cloning a repository & over ssh \texttt{\$ git clone git@github.com:ctu-mrs/mrs\_uav\_core.git} \\
+                & over https \texttt{\$ git clone https://github.com/klaxalk/linux-setup} \\
                 \hline
-                Update origin state & \texttt{:\$ git fetch} \\
-                Update current branch from remote & \texttt{:\$ git pull} \\
-                Update current branch to remote & \texttt{:\$ git push} \\
-                Commit ``patch'' -- interactive  & \texttt{:\$ git commit -p} \\
-                Add files for commit & \texttt{:\$ git add [file]} \\
-                Commit changes & \texttt{:\$ git commit -m "commit message"} \\
+                Update origin state & \texttt{\$ git fetch} \\
+                Update current branch from remote & \texttt{\$ git pull} \\
+                Update current branch to remote & \texttt{\$ git push} \\
+                Commit ``patch'' -- interactive  & \texttt{\$ git commit -p} \\
+                Add files for commit & \texttt{\$ git add [file]} \\
+                Commit changes & \texttt{\$ git commit -m "commit message"} \\
                 \hline
-                Checkout a branch & \texttt{:\$ git checkout [branch name]} \\
-                Create a branch & \texttt{:\$ git checkout -b [branch name]} \\
+                Checkout a branch & \texttt{\$ git checkout [branch name]} \\
+                Create a branch & \texttt{\$ git checkout -b [branch name]} \\
                 \hline
-                unstage the file & \texttt{:\$ git reset [file name]} \\
-                undo all uncommited changes & \texttt{:\$ git reset --hard} \\
-                remove all new unstaged files & \texttt{:\$ git clean -fd} \\
+                unstage the file & \texttt{\$ git reset [file name]} \\
+                undo all uncommited changes & \texttt{\$ git reset --hard} \\
+                remove all new unstaged files & \texttt{\$ git clean -fd} \\
                 \hline
-                Merge a branch & \texttt{:\$ git merge [branch name]} \\
-                Rebase on a branch & \texttt{:\$ git rebase [branch name]} \\
+                Merge a branch & \texttt{\$ git merge [branch name]} \\
+                Rebase on a branch & \texttt{\$ git rebase [branch name]} \\
                 \hline
-                refactor branch history & \texttt{:\$ git filter-branch [lot of args]} \\
+                refactor branch history & \texttt{\$ git filter-branch [lot of args]} \\
                 \hline
-                show status & \texttt{:\$ git status} \\
-                show log & \texttt{:\$ git log} \\
-                show better log & \texttt{:\$ glog} \\
-                % & -- is an alias for \texttt{:\$ git log --graph --abbrev-commit --date=relative --pretty=format:'\%Cred\%h\%Creset -\%C(yellow)\%d\%Creset \%s \%Cgreen(\%cr) \%C(bold blue)<\%an>\%Creset'} \\
-                & -- is an alias for \texttt{:\$ git log} with more arguments\\
-                show super forest log & \texttt{:\$ flog} \\
+                show status & \texttt{\$ git status} \\
+                show log & \texttt{\$ git log} \\
+                show better log & \texttt{\$ glog} \\
+                % & -- is an alias for \texttt{\$ git log --graph --abbrev-commit --date=relative --pretty=format:'\%Cred\%h\%Creset -\%C(yellow)\%d\%Creset \%s \%Cgreen(\%cr) \%C(bold blue)<\%an>\%Creset'} \\
+                & -- is an alias for \texttt{\$ git log} with more arguments\\
+                show super forest log & \texttt{\$ flog} \\
                 & -- uses \texttt{~/.scripts/git-forest.sh} \\
                 \hline
               \end{tabular}
@@ -245,7 +245,7 @@
             When a new terminal is opened and an instance of bash is launched, the \texttt{\textasciitilde/.bashrc} file is \emph{sourced} (executed while its leftover variables, functions and aliases stay in the context).
             We use \texttt{\textasciitilde/.bashrc} heavily for setting context for ROS and our development environment.
             \texttt{\textasciitilde/.bashrc} sources ROS setup scripts, which are also generated by each workspace.
-            If you change this file, source it (or open a new terminal) to activate the changes: \texttt{:\$ source \textasciitilde/.bashrc} or just \texttt{:\$ sb}.
+            If you change this file, source it (or open a new terminal) to activate the changes: \texttt{\$ source \textasciitilde/.bashrc} or just \texttt{\$ sb}.
             Here is an example of what should not be missing in the bottom of a healthy \texttt{\textasciitilde/.bashrc} file:
             \vspace{-1.5em}
             \begin{center}
@@ -296,30 +296,30 @@
                 \hline
                 Getting help & append \texttt{--help} after any following command\\
                 \hline
-                Listing all ROS nodes & \texttt{:\$ ros2 node list} \\
-                Listing all ROS topics & \texttt{:\$ ros2 topic list} \\
-                Listing all ROS services & \texttt{:\$ ros2 service list} \\
-                Listing all ROS params & \texttt{:\$ ros2 param list} \\
+                Listing all ROS nodes & \texttt{\$ ros2 node list} \\
+                Listing all ROS topics & \texttt{\$ ros2 topic list} \\
+                Listing all ROS services & \texttt{\$ ros2 service list} \\
+                Listing all ROS params & \texttt{\$ ros2 param list} \\
                 \hline
-                Running a ROS binary & \texttt{:\$ ros2 run package\_name binary\_name} \\
-                Running a launch file & \texttt{:\$ ros2 launch package\_name launch\_file.launch.py} \\
+                Running a ROS binary & \texttt{\$ ros2 run package\_name binary\_name} \\
+                Running a launch file & \texttt{\$ ros2 launch package\_name file.launch.py} \\
                 \hline
-                Showing a node info & \texttt{:\$ ros2 node info /node/path} \\
-                Showing a topic info & \texttt{:\$ ros2 topic info /topic/path} \\
-                Showing a service info & \texttt{:\$ ros2 service info /service/path} \\
+                Showing a node info & \texttt{\$ ros2 node info /node/path} \\
+                Showing a topic info & \texttt{\$ ros2 topic info /topic/path} \\
+                Showing a service info & \texttt{\$ ros2 service info /service/path} \\
                 \hline
-                Showing a topic type & \texttt{:\$ ros2 topic type /topic/path} \\
-                Showing a service type & \texttt{:\$ ros2 service type /topic/path} \\
+                Showing a topic type & \texttt{\$ ros2 topic type /topic/path} \\
+                Showing a service type & \texttt{\$ ros2 service type /topic/path} \\
                 \hline
-                Showing all interfaces & \texttt{:\$ ros2 interface list  } \\
-                Showing a specific interface & \texttt{:\$ ros2 interface show [type]} \\
+                Showing all interfaces & \texttt{\$ ros2 interface list  } \\
+                Showing a specific interface & \texttt{\$ ros2 interface show [type]} \\
                 \hline
-                Showing topic messages & \texttt{:\$ ros2 topic echo /topic/path} \\
-                Showing a param value & \texttt{:\$ ros2 param get /node/path /param/path} \\
+                Showing topic messages & \texttt{\$ ros2 topic echo /topic/path} \\
+                Showing a param value & \texttt{\$ ros2 param get /node/path /param/path} \\
                 \hline
-                Calling a service & \texttt{:\$ ros2 service call /service/path [args]} \\
-                Publishing on a topic & \texttt{:\$ ros2 topic pub /topic/path [type]} \\
-                Setting a param value & \texttt{:\$ ros2 param set /node/path /param/path [value]} \\
+                Calling a service & \texttt{\$ ros2 service call /service/path [args]} \\
+                Publishing on a topic & \texttt{\$ ros2 topic pub /topic/path [type]} \\
+                Setting a param value & \texttt{\$ ros2 param set /node/path /param/path [value]} \\
                 \hline
               \end{tabular}
             }
@@ -359,8 +359,8 @@
                 \hline
                 path & \texttt{\textasciitilde/workspace/}\\
                 contains & \texttt{src/}\\
-                & -- \texttt{mrs\_core\_examples/example\_waypoint\_flier} -- general example\\
-                & -- \texttt{mrs\_computer\_vision\_examples} -- computer vision templates\\
+                & -- \texttt{example\_waypoint\_flier} -- general example\\
+                & -- \texttt{mrs\_computer\_vision\_examples} -- templates\\
                 \hline
               \end{tabular}
             }
@@ -371,13 +371,10 @@
               \begin{tabular}{lp{8.0cm} r}
                 \hline
                 \texttt{build} & generated makefiles and support files\\
-                & \textbf{do not modify}\\
                 \texttt{install} & compiled binaries, libraries and installed headers\\
-                & \textbf{do not modify}\\
                 \texttt{log} & saved logs of previous development builds\\
-                & \textbf{do not modify}\\
                 \texttt{src} & package source codes\\
-                & \textbf{place your stuff in here}\\
+                & \textbf{place your stuff in here, do not modify the other folders}\\
                 \hline
               \end{tabular}
             }
@@ -403,20 +400,20 @@
             \scriptsize{
               \begin{tabular}{lp{5cm} r}
                 \hline
-                finding a package & \texttt{:\$ ros2 pkg prefix --share [package]}\\
+                finding a package & \texttt{\$ ros2 pkg prefix --share [pkg]}\\
                 \hline
-                compile the whole workspace & \texttt{:\$ colcon build}\\
-                compile a particular package & \texttt{:\$ colcon build --packages-select [package]}\\
-                compile a package + dependencies & \texttt{:\$ colcon build --packages-up-to [package]}\\
-                clean the whole workspace (extension) & \texttt{:\$ colcon clean workspace}\\
-                clean a particular package & \texttt{:\$ rm -rf build/[package] install/[package]}\\
+                compile the whole workspace & \texttt{\$ colcon build}\\
+                compile a particular package & \texttt{\$ colcon build --packages-select [pkg]}\\
+                compile package + dependencies & \texttt{\$ colcon build --packages-up-to [pkg]}\\
+                clean the workspace (extension) & \texttt{\$ colcon clean workspace}\\
+                clean a particular package & \texttt{\$ rm -rf build/[pkg] install/[pkg]}\\
                 \hline
-                show workspace config & \texttt{:\$ cat colcon\_defaults.yaml}\\
-                show mixins (extension) & \texttt{:\$ colcon mixin list}\\
-                compile with mixins & \texttt{:\$ colcon build --mixin [profile]}\\
+                show workspace config & \texttt{\$ cat colcon\_defaults.yaml}\\
+                show mixins (extension) & \texttt{\$ colcon mixin list}\\
+                compile with mixins & \texttt{\$ colcon build --mixin [profile]}\\
                 \hline
-                create a new workspace (shell additions) & \texttt{:\$ colcon init}\\
-                source a workspace & \texttt{:\$ source [path]/setup.bash}\\
+                create a workspace (extension) & \texttt{\$ colcon init}\\
+                source a workspace & \texttt{\$ source [path]/setup.bash}\\
                 \hline
               \end{tabular}
 
@@ -474,22 +471,22 @@
               \begin{tabular}{lp{6cm} r}
                 \hline
                 Rviz & 3-D visualization of data and models \\
-                & \texttt{:\$ rviz2} \\
-                & \texttt{:\$ ros2 run rviz2 rviz2 -d ./rviz.rviz} \\ \hline
+                & \texttt{\$ rviz2} \\
+                & \texttt{\$ ros2 run rviz2 rviz2 -d ./rviz.rviz} \\ \hline
                 Rqt plot & simple and lightweight plotting \\
-                & \texttt{:\$ ros2 run rqt\_plot rqt\_plot} \\ \hline
+                & \texttt{\$ ros2 run rqt\_plot rqt\_plot} \\ \hline
                 Rqt bag & visualizing contents of a rosbag \\
-                & \texttt{:\$ ros2 run rqt\_bag rqt\_bag} \\ \hline
+                & \texttt{\$ ros2 run rqt\_bag rqt\_bag} \\ \hline
                 Plot juggler & complex and powerful plotting \\
-                & \texttt{:\$ ros2 run plotjuggler plotjuggler} \\ \hline
+                & \texttt{\$ ros2 run plotjuggler plotjuggler} \\ \hline
                 Rqt reconfigure & online parameter setting \\
-                & \texttt{:\$ ros2 run rqt\_reconfigure rqt\_reconfigure} \\ \hline
+                & \texttt{\$ ros2 run rqt\_reconfigure rqt\_reconfigure} \\ \hline
                 Rqt image view & camera images visualization \\
-                & \texttt{:\$ ros2 run rqt\_image\_view rqt\_image\_view} \\ \hline
+                & \texttt{\$ ros2 run rqt\_image\_view rqt\_image\_view} \\ \hline
                 Gazebo client & Gazebo GUI \\
-                & \texttt{:\$ gz sim} \\ \hline
+                & \texttt{\$ gz sim} \\ \hline
                 rqt & Integrates most of the \textit{rqt\_} tools \\
-                & \texttt{:\$ rqt} \\ \hline
+                & \texttt{\$ rqt} \\ \hline
               \end{tabular}
             }
 
@@ -573,10 +570,10 @@
           \scriptsize{
             \begin{itemize}
               \setlength\itemsep{0.0em}
-              \item Generate your SSH key by: \texttt{:\$ ssh-keygen -t rsa -b 4096 -C "your\_email@example.com"}.
+              \item Generate your SSH key by: \texttt{\$ ssh-keygen -t rsa -b 4096 -C "your\_email@example.com"}.
               \item The keys are stored in \texttt{\textasciitilde/.ssh}.
-              \item Show the content of the public key by: \texttt{:\$ cat \textasciitilde/.ssh/id\_rsa.pub} and copy it to Github or Gitlab.
-              \item Copy your public key over ssh to another machine by: \texttt{:\$ ssh-copy-id user@machine}.
+              \item Show the content of the public key by: \texttt{\$ cat \textasciitilde/.ssh/id\_rsa.pub} and copy it to Github or Gitlab.
+              \item Copy your public key over ssh to another machine by: \texttt{\$ ssh-copy-id user@machine}.
               \item Entries in the \texttt{\textasciitilde/.ssh/config} allow connecting to a machine via alias while using an ssh key:
             \end{itemize}
             \vspace{-2.8em}
@@ -604,11 +601,11 @@
         \begin{minipage}{0.47\textwidth}
           \scriptsize{
             We use a ROS node called \texttt{mrs\_drone\_spawner} to dynamically load a UAV into the Gazebo/ROS simulator.
-            By default, it starts automatically with Gazebo using \texttt{:\$ ros2 launch mrs\_uav\_gazebo\_simulator simulation.launch.py}. \\
-            Spawn a drone by calling the service \texttt{:\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String} \\
-            If the service does not exist, start the spawner by \texttt{:\$ ros2 launch mrs\_uav\_gazebo\_simulator mrs\_drone\_spawner.launch.py} \\
+            By default, it starts automatically with Gazebo using \texttt{\$ ros2 launch mrs\_uav\_gazebo\_simulator simulation.launch.py}. \\
+            Spawn a drone by calling the service \texttt{\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String} \\
+            If the service does not exist, start the spawner by \texttt{\$ ros2 launch mrs\_uav\_gazebo\_simulator mrs\_drone\_spawner.launch.py} \\
             Various arguments can be used to influence the type of the drone, its sensors, its starting location and additional onboard hardware.
-            Run the command \texttt{:\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String "value: --x500 --help"} to see a list. Here are some notable examples:
+            Run the command \texttt{\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String "value: --x500 --help"} to see a list. Here are some notable examples:
             \begin{center}
               \begin{tabular}{lp{5cm} r}
                 \hline
@@ -632,7 +629,7 @@
               \end{tabular}
             \end{center}
             A typical simulation spawning looks like:\\
-            \texttt{:\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String "value: 1 --f450 --enable-rangefinder"}
+            \texttt{\$ ros2 service call /mrs\_drone\_spawner/spawn mrs\_msgs/srv/String "value: 1 --f450 --enable-rangefinder"}
             \vspace{-1em}
           }
         \end{minipage}
