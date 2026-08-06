@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-sudo apt update
-sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick
+sudo apt-get update
+sudo apt-get -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick
 
 pdflatex -interaction=nonstopmode main.tex
 pdftoppm -jpeg main.pdf thumbnail.jpg

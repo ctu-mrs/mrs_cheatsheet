@@ -4,7 +4,7 @@ Are you new to our lab? Or just a stranger from the internet? Print this cheatsh
 
 ## Click the thumbnail to download
 
-[![Cheatsheet PDF](https://github.com/ctu-mrs/mrs_cheatsheet/raw/gh-pages/thumbnail.jpg)](https://github.com/ctu-mrs/mrs_cheatsheet/raw/gh-pages/mrs_cheatsheet.pdf)
+[![Cheatsheet PDF](https://ctu-mrs.github.io/mrs_cheatsheet/thumbnail.jpg)](https://ctu-mrs.github.io/mrs_cheatsheet/mrs_cheatsheet.pdf)
 
 ## The cheatsheet aims to help with the daily use of:
   * Linux terminal (Bash),
