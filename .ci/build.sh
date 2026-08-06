@@ -1,11 +1,7 @@
 #!/bin/bash
 set -e
 
-distro=`lsb_release -r | awk '{ print $2 }'`
-[ "$distro" = "18.04" ] && ROS_DISTRO="melodic"
-[ "$distro" = "20.04" ] && ROS_DISTRO="noetic"
-
-sudo apt -y update
+sudo apt update
 sudo apt -y install texlive-latex-base texlive-latex-extra poppler-utils imagemagick
 
 pdflatex -interaction=nonstopmode main.tex
