@@ -172,7 +172,7 @@
             }
         \end{minipage}
         };
-        \node[fancytitle, right=10pt] at (box.north west) {Vim -- a modern modular text processor};
+        \node[fancytitle, right=10pt] at (box.north west) {Vim (NoeVim) -- a modern modular text processor};
     \end{tikzpicture}
 
     %%}
@@ -250,22 +250,16 @@
             \vspace{-1.5em}
             \begin{center}
               \begin{lstlisting}
-        source /opt/ros/lyrical/setup.bash
+        source /opt/ros/jazzy/setup.bash
 
         source ~/workspace/install/setup.bash
-        # source ~/other_workspace/install/setup.sh
-
-        # export ROS_WORKSPACE="$HOME/mrs_workspace"
-        export ROS_WORKSPACES="~/mrs_workspace ~/workspace"
+        # source ~/other_workspace/install/setup.bash
 
         export GIT_PATH=$HOME/git
 
-        export RUN_TMUX=true
+        export RUN_TMUX=false
 
-        # VARIABLES TO CONFIGURE THE MRS ROS PIPELINE
         export UAV_NAME="uav1"
-        # ...
-        export MRS_STATUS="readme"
 
         source $GIT_PATH/mrs_uav_development/shell_additions/shell_additions.sh
 
@@ -314,7 +308,7 @@
                 Showing all interfaces & \texttt{\$ ros2 interface list  } \\
                 Showing a specific interface & \texttt{\$ ros2 interface show [type]} \\
                 \hline
-                Showing topic messages & \texttt{\$ ros2 topic echo /topic/path} \\
+                Showing topic messages & \texttt{\$ ros2 topic echo /topic/path} --flow-style \\
                 Showing a param value & \texttt{\$ ros2 param get /node/path /param/path} \\
                 \hline
                 Calling a service & \texttt{\$ ros2 service call /service/path [args]} \\
