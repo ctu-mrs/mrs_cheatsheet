@@ -683,7 +683,8 @@ SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", OWNER="mrs", MODE="0666"
                 \item Make sure the machines can ping each other using their hostnames.
                 \item Set matching \texttt{export ROS\_DOMAIN\_ID=<ID>} in the \texttt{\textasciitilde/.bashrc} on both machines (0 by default).
                 \item Add \texttt{export RMW\_IMPLEMENTATION=rmw\_zenoh\_cpp} to the \texttt{\textasciitilde/.bashrc} on both machines.
-                \item Add \texttt{export ZENOH\_CONNECT="tcp/<remote\_host>:7447"} to the \textbf{local} machine's \texttt{\textasciitilde/.bashrc}.
+                \item Set the endpoint in \textbf{your machine's} \texttt{ZENOH\_ROUTER\_CONFIG\_URI} config file under \texttt{connect.endpoints}
+                \item Or \texttt{export ZENOH\_CONFIG\_OVERRIDE='connect/endpoints=["tcp/<remote\_host>:7447"]'} in the \texttt{\textasciitilde/.bashrc}.
                 \item \textbf{Do NOT export \texttt{ROS\_DISCOVERY\_SERVER}} when using the Zenoh RMW.
                 \item Run the Zenoh daemon \texttt{ros2 run rmw\_zenoh\_cpp rmw\_zenohd} on both machines.
               \end{itemize}
