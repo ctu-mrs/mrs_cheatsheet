@@ -252,7 +252,6 @@
             \begin{center}
               \begin{lstlisting}
         source /opt/ros/jazzy/setup.bash
-
         source ~/workspace/install/setup.bash
         # source ~/other_workspace/install/setup.bash
 
@@ -270,6 +269,46 @@
 
         };
         \node[fancytitle, right=10pt] at (box.north west) {\textasciitilde/.bashrc -- Bash configuration};
+    \end{tikzpicture}
+
+    %%}
+
+    %%{ STORAGE & DEVICES
+
+    \begin{tikzpicture}
+      \node [mybox] (box){%
+        \begin{minipage}{0.47\textwidth}
+          \begin{center}
+            \scriptsize{
+              \textbf{Device discovery, file systems, mounting, and hardware rules}
+              \begin{tabular}{lp{5.2cm}}
+                \hline
+                List block devices \& UUIDs & \texttt{\$ lsblk -f} \\
+                List USB devices & \texttt{\$ lsusb} \\
+                Monitor kernel events (plug/unplug) & \texttt{\$ sudo dmesg -w} or \texttt{\$ udevadm monitor} \\ \hline
+                View partition tables & \texttt{\$ sudo fdisk -l} \\
+                Mount drive partition & \texttt{\$ sudo mount /dev/sdX1 /mnt/folder} \\
+                Unmount drive & \texttt{\$ sudo umount /mnt/folder} \\ \hline
+              \end{tabular}
+
+              \vspace{0.2em}
+              \textbf{USB Permissions \& \texttt{udev} Rules (e.g., Luxonis OAK)} \\
+              Create rule file in \texttt{/etc/udev/rules.d/60-luxonis.rules}:
+              \vspace{-1.2em}
+              \begin{center}
+                \begin{lstlisting}
+SUBSYSTEM=="usb", ATTRS{idVendor}=="03e7", OWNER="mrs", MODE="0666"
+                \end{lstlisting}
+                \vspace{-1.4em}
+              \end{center}
+              Apply new udev rules without rebooting: \\
+              \texttt{\$ sudo udevadm control --reload-rules \&\& sudo udevadm trigger}
+              \vspace{-1.0em}
+            }
+          \end{center}
+        \end{minipage}
+        };
+        \node[fancytitle, right=10pt] at (box.north west) {Storage \& Devices};
     \end{tikzpicture}
 
     %%}
