@@ -253,7 +253,6 @@
               \begin{lstlisting}
         source /opt/ros/jazzy/setup.bash
         source ~/workspace/install/setup.bash
-        # source ~/other_workspace/install/setup.bash
 
         export GIT_PATH=$HOME/git
         export RUN_TMUX=false
@@ -287,6 +286,7 @@
                 List USB devices & \texttt{\$ lsusb} \\
                 Monitor kernel events (plug/unplug) & \texttt{\$ sudo dmesg -w} or \texttt{\$ udevadm monitor} \\ \hline
                 View partition tables & \texttt{\$ sudo fdisk -l} \\
+                Flush cached writes to disk & \texttt{\$ sync} \\
                 Mount drive partition & \texttt{\$ sudo mount /dev/sdX1 /mnt/folder} \\
                 Unmount drive & \texttt{\$ sudo umount /mnt/folder} \\ \hline
               \end{tabular}
